@@ -1,0 +1,192 @@
+{
+  "navbar": {
+    "design": "Design",
+    "social": "Social Media",
+    "pricing": "Prezzi",
+    "process": "Processo",
+    "portfolio": "Portfolio",
+    "contact": "Contatti"
+  },
+  "a11y": {
+    "skip": "Vai al contenuto"
+  },
+  "hero": {
+    "eyebrow": "Studio di Design & Social Media",
+    "heading": "Prezzo Fisso. Scopo Fisso.",
+    "subheading": "Nessuna trattativa, nessuna sorpresa.",
+    "tagline": "Prezzo fisso. Scopo fisso. Nessuna sorpresa.",
+    "cta": "Vedi i Prezzi",
+    "cta2": "Scopri i Servizi"
+  },
+  "values": {
+    "transparency": {
+      "title": "Prezzi Trasparenti",
+      "desc": "Ogni prezzo è pubblico. Nessun costo nascosto, nessuna trattativa."
+    },
+    "scope": {
+      "title": "Scopo Definito",
+      "desc": "Sai esattamente cosa ottieni prima di impegnarti."
+    },
+    "value": {
+      "title": "30% Sotto Mercato",
+      "desc": "Risultati professionali a prezzi ben sotto la media del mercato italiano."
+    }
+  },
+  "design": {
+    "kicker": "Servizi di Design — Una Tantum",
+    "title": "Pacchetti di Design",
+    "lead": "Tre livelli. Scegli lo scopo giusto, paghi una volta.",
+    "payment": "Pagamento: Intero o 3 rate (stesso prezzo). Prepagato annuale: +10–15% di sconto.",
+    "cta": "Inizia ora"
+  },
+  "packages": {
+    "spark": {
+      "name": "Spark",
+      "price": "€600–850",
+      "delivery": "1–2 settimane",
+      "revisions": "2 round",
+      "desc": "Tutto ciò che serve a un nuovo brand per partire pulito.",
+      "features": [
+        "Logo + identità base",
+        "Sito di 1 pagina",
+        "Sistema colori e tipografia",
+        "2 round di revisione"
+      ]
+    },
+    "amplify": {
+      "name": "Amplify",
+      "price": "€1.400–2.100",
+      "delivery": "2–3 settimane",
+      "revisions": "2 round",
+      "tag": "Più scelto",
+      "desc": "Un'identità completa per brand pronti a crescere.",
+      "features": [
+        "Identità completa + brand guide",
+        "Sito fino a 5 pagine",
+        "Biglietto da visita + brochure",
+        "2 round di revisione"
+      ]
+    },
+    "dominate": {
+      "name": "Dominate",
+      "price": "€2.800–3.900",
+      "delivery": "3–5 settimane",
+      "revisions": "3 round",
+      "desc": "Il pacchetto completo per i leader di mercato.",
+      "features": [
+        "Tutto di Amplify",
+        "Sito fino a 10 pagine",
+        "Set stampa completo",
+        "Configurazione ads",
+        "3 round di revisione"
+      ]
+    }
+  },
+  "social": {
+    "kicker": "Social Media — Mensile, Scalabile",
+    "title": "Servizi Social Media",
+    "lead": "Scegli il volume. Il prezzo si aggiorna in tempo reale.",
+    "cta": "Calcola il costo",
+    "annual": "Sconto Prepagato Annuale: 10 mesi pagati = 12 mesi erogati (~17% di sconto).",
+    "kit": {
+      "title": "Kit Social Media",
+      "type": "Configurazione una tantum",
+      "price": "€140–210",
+      "items": [
+        "Colori del brand (codici hex)",
+        "Regole tipografiche",
+        "10 template per i post",
+        "Guida Do's & Don'ts"
+      ]
+    },
+    "graphics": {
+      "title": "Post Grafici Social",
+      "sub": "Post al mese",
+      "unit": "post / mese",
+      "addon": "Post extra: €22 a post",
+      "per": "a post"
+    },
+    "reels": {
+      "title": "Reels & Video Loop",
+      "sub": "Reels al mese",
+      "unit": "reels / mese",
+      "addon": "Reels extra: €95 a reel",
+      "per": "a reel"
+    }
+  },
+  "pricing": {
+    "kicker": "Tutti i Pacchetti",
+    "title": "Riepilogo Prezzi",
+    "lead": "Tutto in un unico posto. Quello che vedi è quello che paghi.",
+    "table": {
+      "package": "Pacchetto",
+      "price": "Prezzo",
+      "delivery": "Consegna",
+      "revisions": "Revisioni"
+    },
+    "groups": {
+      "design": "Design — Una Tantum",
+      "social": "Social — Mensile"
+    },
+    "rows": {
+      "kit": { "name": "Kit Social Media", "price": "€140–210", "delivery": "Una tantum", "revisions": "—" },
+      "graphics": { "name": "Grafiche Social (da)", "price": "€80–100/mese", "delivery": "Mensile", "revisions": "—" },
+      "reels": { "name": "Reels & Video (da)", "price": "€120–150/mese", "delivery": "Mensile", "revisions": "—" }
+    }
+  },
+  "process": {
+    "kicker": "Come Funziona",
+    "title": "Quattro Passi",
+    "lead": "Un percorso chiaro dal brief alla consegna.",
+    "steps": [
+      { "title": "Scegli", "desc": "Scegli un pacchetto. Il prezzo è fisso e pubblico — nessun preventivo da inseguire." },
+      { "title": "Brief", "desc": "Condividi obiettivi e materiali. Confermiamo lo scopo per iscritto." },
+      { "title": "Crea", "desc": "Progettiamo e consegniamo, con i round di revisione inclusi nel tuo livello." },
+      { "title": "Lancia", "desc": "Ricevi i file finali, pronti da pubblicare e far crescere." }
+    ]
+  },
+  "portfolio": {
+    "kicker": "Lavori Selezionati",
+    "title": "Portfolio",
+    "lead": "Risultati reali. Credibilità dal lavoro, non dai nomi.",
+    "before": "Prima",
+    "after": "Dopo",
+    "cases": [
+      {
+        "tag": "Brand Identity",
+        "title": "Rebrand caffetteria locale",
+        "desc": "Un brand stanco ricostruito attorno a un sistema d'identità pulito e strutturato.",
+        "result": "+34% di engagement in 60 giorni"
+      },
+      {
+        "tag": "Grafiche Social",
+        "title": "Lancio studio fitness",
+        "desc": "Un sistema di template coerente che ha reso un nuovo studio affermato dal primo giorno.",
+        "result": "1.2k follower nel primo mese"
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Inizia",
+    "title": "Contatti",
+    "lead": "Dicci lo scopo. Confermiamo il prezzo fisso.",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "service": "Interessato a",
+      "opt_design": "Pacchetto Design",
+      "opt_graphics": "Grafiche Social",
+      "opt_reels": "Reels & Video",
+      "opt_other": "Altro",
+      "message": "Messaggio",
+      "submit": "Invia messaggio",
+      "success": "Grazie — il tuo client email dovrebbe aprirsi. Altrimenti scrivi a hello@punto.design.",
+      "error": "Compila tutti i campi obbligatori."
+    }
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Termini",
+    "cookies": "Cookie"
+  }
+}
