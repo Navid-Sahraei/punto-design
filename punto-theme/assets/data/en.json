@@ -1,0 +1,192 @@
+{
+  "navbar": {
+    "design": "Design",
+    "social": "Social Media",
+    "pricing": "Pricing",
+    "process": "Process",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "a11y": {
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "eyebrow": "Design & Social Media Studio",
+    "heading": "Fixed Price. Fixed Scope.",
+    "subheading": "No negotiation, no surprises.",
+    "tagline": "Fixed price. Fixed scope. No surprises.",
+    "cta": "View Pricing",
+    "cta2": "Explore Services"
+  },
+  "values": {
+    "transparency": {
+      "title": "Transparent Pricing",
+      "desc": "Every price is public. No hidden fees, no negotiation games."
+    },
+    "scope": {
+      "title": "Fixed Scope",
+      "desc": "You know exactly what you get before you commit."
+    },
+    "value": {
+      "title": "30% Below Market",
+      "desc": "Professional results at prices well under the Italy market rate."
+    }
+  },
+  "design": {
+    "kicker": "Design Services — One-Time",
+    "title": "Design Packages",
+    "lead": "Three tiers. Pick the scope that fits, pay once.",
+    "payment": "Payment: Full or 3 instalments (same price). Annual prepay: +10–15% discount.",
+    "cta": "Get started"
+  },
+  "packages": {
+    "spark": {
+      "name": "Spark",
+      "price": "€600–850",
+      "delivery": "1–2 weeks",
+      "revisions": "2 rounds",
+      "desc": "Everything a new brand needs to launch clean.",
+      "features": [
+        "Logo + basic identity",
+        "1-page website",
+        "Core color & type system",
+        "2 revision rounds"
+      ]
+    },
+    "amplify": {
+      "name": "Amplify",
+      "price": "€1,400–2,100",
+      "delivery": "2–3 weeks",
+      "revisions": "2 rounds",
+      "tag": "Most popular",
+      "desc": "A full identity for brands ready to grow.",
+      "features": [
+        "Full identity + brand guide",
+        "Up to 5-page website",
+        "Business card + brochure",
+        "2 revision rounds"
+      ]
+    },
+    "dominate": {
+      "name": "Dominate",
+      "price": "€2,800–3,900",
+      "delivery": "3–5 weeks",
+      "revisions": "3 rounds",
+      "desc": "The complete package for market leaders.",
+      "features": [
+        "Everything in Amplify",
+        "Up to 10-page website",
+        "Full print set",
+        "Ads setup",
+        "3 revision rounds"
+      ]
+    }
+  },
+  "social": {
+    "kicker": "Social Media — Monthly, Scalable",
+    "title": "Social Media Services",
+    "lead": "Choose your volume. The price updates in real time.",
+    "cta": "Calculate my cost",
+    "annual": "Annual Prepay Discount: 10 months paid = 12 months delivered (~17% off).",
+    "kit": {
+      "title": "Social Media Kit",
+      "type": "One-time setup",
+      "price": "€140–210",
+      "items": [
+        "Brand colors (hex codes)",
+        "Typography rules",
+        "10 post templates",
+        "Do's & Don'ts guide"
+      ]
+    },
+    "graphics": {
+      "title": "Social Graphics Posts",
+      "sub": "Posts per month",
+      "unit": "posts / month",
+      "addon": "Extra posts: €22 per post",
+      "per": "per post"
+    },
+    "reels": {
+      "title": "Reels & Video Loops",
+      "sub": "Reels per month",
+      "unit": "reels / month",
+      "addon": "Extra reels: €95 per reel",
+      "per": "per reel"
+    }
+  },
+  "pricing": {
+    "kicker": "All Packages",
+    "title": "Pricing Overview",
+    "lead": "Everything in one place. What you see is what you pay.",
+    "table": {
+      "package": "Package",
+      "price": "Price",
+      "delivery": "Delivery",
+      "revisions": "Revisions"
+    },
+    "groups": {
+      "design": "Design — One-Time",
+      "social": "Social — Monthly"
+    },
+    "rows": {
+      "kit": { "name": "Social Media Kit", "price": "€140–210", "delivery": "One-time", "revisions": "—" },
+      "graphics": { "name": "Social Graphics (from)", "price": "€80–100/mo", "delivery": "Monthly", "revisions": "—" },
+      "reels": { "name": "Reels & Video (from)", "price": "€120–150/mo", "delivery": "Monthly", "revisions": "—" }
+    }
+  },
+  "process": {
+    "kicker": "How It Works",
+    "title": "Four Steps",
+    "lead": "A clear path from brief to delivery.",
+    "steps": [
+      { "title": "Choose", "desc": "Pick a package. The price is fixed and public — no quotes to chase." },
+      { "title": "Brief", "desc": "Share your goals and assets. We confirm the scope in writing." },
+      { "title": "Create", "desc": "We design and deliver, with the revision rounds included in your tier." },
+      { "title": "Launch", "desc": "You receive final files, ready to publish and grow." }
+    ]
+  },
+  "portfolio": {
+    "kicker": "Selected Work",
+    "title": "Portfolio",
+    "lead": "Real results. Credibility through work, not names.",
+    "before": "Before",
+    "after": "After",
+    "cases": [
+      {
+        "tag": "Brand Identity",
+        "title": "Local café rebrand",
+        "desc": "A tired storefront brand rebuilt around a clean, structured identity system.",
+        "result": "+34% engagement in 60 days"
+      },
+      {
+        "tag": "Social Graphics",
+        "title": "Fitness studio launch",
+        "desc": "A cohesive template system that made a new studio look established from day one.",
+        "result": "1.2k followers in first month"
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Get Started",
+    "title": "Contact",
+    "lead": "Tell us the scope. We'll confirm the fixed price.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "service": "Interested in",
+      "opt_design": "Design Package",
+      "opt_graphics": "Social Graphics",
+      "opt_reels": "Reels & Video",
+      "opt_other": "Something else",
+      "message": "Message",
+      "submit": "Send message",
+      "success": "Thanks — your email client should open. If not, write to hello@punto.design.",
+      "error": "Please fill in all required fields."
+    }
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  }
+}

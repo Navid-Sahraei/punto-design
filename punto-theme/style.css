@@ -1,0 +1,24 @@
+/*
+Theme Name: Punto
+Theme URI: https://punto.design
+Description: Fixed-price design & social media studio. Concept A — Precision Grid. A faithful classic-PHP port of the static Punto site: mouse-tracking red dot, hover card lifts, hero grid glow, dynamic pricing calculators, and a client-side EN/IT language toggle. WooCommerce-ready.
+Author: Punto
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: punto
+Tags: business, portfolio, one-page, custom-menu, translation-ready
+*/
+
+/*
+  NOTE
+  ----
+  This file exists so WordPress can read the theme header above.
+  The site's REAL stylesheet lives at assets/css/styles.css and is
+  loaded via wp_enqueue_style() in functions.php (handle: "punto-main").
+  Do not paste the design CSS here — keeping it in assets/ preserves
+  the exact file the static site uses, byte for byte.
+*/
