@@ -1,0 +1,12 @@
+# Build artifacts
+punto-theme.zip
+*.zip
+
+# Local tooling / dependencies (not part of the site or theme)
+node_modules/
+package.json
+package-lock.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
