@@ -8,19 +8,18 @@ WooCommerce-ready but not WooCommerce-dependent.
 
 ## 1. Zip the theme
 
-From the folder that contains `punto-theme/`:
+From the folder that **contains** `punto-theme/` (i.e. the repo root):
 
 ```bash
-cd punto-theme
-zip -r ../punto-theme.zip . -x ".*"
-cd ..
+zip -r punto-theme.zip punto-theme -x "*/.git*"
 ```
 
 You should now have `punto-theme.zip` next to the folder.
 
-> Tip: the zip must contain the theme files at its **root** (i.e. `style.css`
-> is directly inside the zip, inside the `punto-theme/` folder). The command
-> above does that correctly.
+> Tip: the zip must contain a single top-level **folder** `punto-theme/` with
+> `style.css` inside it — WordPress rejects a zip whose files sit at the root.
+> The command above does that correctly (run it from the parent folder, not
+> from inside `punto-theme/`).
 
 ## 2. Upload & activate
 
