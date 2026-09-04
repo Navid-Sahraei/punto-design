@@ -1,0 +1,22 @@
+/*
+Theme Name: Punto
+Theme URI: https://navid-sahraei.github.io/punto-design/
+Author: Punto Design
+Author URI: https://navid-sahraei.github.io/punto-design/
+Description: Fixed-price design & social media studio. A faithful WordPress port of the static Punto site — same markup, CSS, fonts, and interactions. Bilingual (Italian default + English page template), WooCommerce-ready.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: punto
+Tags: one-page, custom-menu, translation-ready, e-commerce
+*/
+
+/*
+  The site's real stylesheet lives in assets/css/style.css and is loaded via
+  wp_enqueue_style() in functions.php (handle: "punto-style"). It is kept there
+  verbatim so the design stays pixel-for-pixel identical to the static site.
+  This root style.css only carries the required WordPress theme header above.
+*/
