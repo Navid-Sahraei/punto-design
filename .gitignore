@@ -28,6 +28,9 @@ npm-debug.log*
 dist/
 build/
 
+# Packaged theme (build artifact — rebuild with: cd punto-theme && zip -r ../punto-theme.zip .)
+*.zip
+
 # Environment
 .env
 .env.local
