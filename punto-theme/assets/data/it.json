@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Punto — Design & social a prezzo fisso",
+    "description": "Studio di design e social media a prezzo fisso. Un pacchetto, un numero, nessuna sorpresa in fattura. Punto."
+  },
+  "nav": {
+    "skip": "Salta ai pacchetti",
+    "brandAria": "Punto — torna su",
+    "navAria": "Navigazione principale",
+    "packages": "Pacchetti",
+    "how": "Come funziona",
+    "faq": "FAQ",
+    "cta": "Prenota una call"
+  },
+  "hero": {
+    "eyebrow": "Studio di design & social media",
+    "lede": "Design e social a prezzo fisso. Un pacchetto, un numero, nessuna sorpresa in fattura.",
+    "choose": "Scegli un pacchetto",
+    "how": "Come funziona",
+    "foot1": "Due giri di revisioni inclusi",
+    "foot2": "Consegna nei tempi",
+    "foot3": "Fattura sempre"
+  },
+  "manifesto": {
+    "title": "Basta preventivi che cambiano",
+    "item1": "Niente tariffe orarie",
+    "item2": "Niente “dipende”",
+    "item3": "Niente revisioni a sorpresa",
+    "note": "Il numero che vedi accanto al pacchetto è il numero che paghi. Lo scriviamo prima di iniziare, e resta quello."
+  },
+  "pkg": {
+    "eyebrow": "I pacchetti",
+    "title": "Scegli. Sai già quanto costa.",
+    "id": {
+      "name": "Identità",
+      "desc": "Logo, palette, tipografia e un mini brand kit pronto all’uso.",
+      "unit": "/ progetto",
+      "li1": "Logo in versione principale + secondaria",
+      "li2": "Palette colori e coppia di font",
+      "li3": "Kit file per stampa e web",
+      "li4": "Consegna in 10 giorni",
+      "cta": "Prenota Identità"
+    },
+    "social": {
+      "badge": "Il più scelto",
+      "name": "Social",
+      "desc": "Contenuti pronti da pubblicare, ogni mese, senza rincorrere le idee.",
+      "unit": "/ mese",
+      "li1": "12 post + 8 storie al mese",
+      "li2": "Piano editoriale mensile",
+      "li3": "Grafiche coordinate con la tua identità",
+      "li4": "Nessun vincolo: disdici quando vuoi",
+      "cta": "Prenota Social"
+    },
+    "sito": {
+      "name": "Sito",
+      "desc": "Un sito vetrina one-page, veloce e leggibile su ogni schermo.",
+      "unit": "/ progetto",
+      "li1": "One-page responsive, testi inclusi",
+      "li2": "Modulo contatti e mappa",
+      "li3": "Ottimizzazione base per Google",
+      "li4": "Consegna in 15 giorni",
+      "cta": "Prenota Sito"
+    },
+    "fineprint": "Prezzi IVA esclusa. Serve più di un pacchetto? Si combinano. Progetto fuori misura? <a href='#prenota'>Preventivo custom, comunque bloccato.</a>"
+  },
+  "steps": {
+    "eyebrow": "Come funziona",
+    "title": "Quattro passi, e finisce lì.",
+    "s1t": "Scegli il pacchetto",
+    "s1x": "Prezzo e tempi sono già scritti. Nessun preventivo da aspettare.",
+    "s2t": "Blocchi la data",
+    "s2x": "Un acconto fissa l’inizio del lavoro. Il resto alla consegna.",
+    "s3t": "Mandi i materiali",
+    "s3x": "Un brief guidato ti chiede solo quello che serve davvero.",
+    "s4t": "Ricevi il lavoro",
+    "s4x": "Nei tempi previsti, con due giri di revisioni inclusi. Punto."
+  },
+  "faq": {
+    "eyebrow": "Domande giuste",
+    "title": "Le risposte, senza giri.",
+    "q1": "Il prezzo è davvero fisso?",
+    "a1": "Sì. Il numero accanto al pacchetto è quello che paghi. Lo mettiamo per iscritto prima di partire e non cambia in corsa.",
+    "q2": "E se servono altre modifiche?",
+    "a2": "Due giri di revisioni sono inclusi in ogni pacchetto. Se ne servono altri, hanno una tariffa fissa a giro, scritta nel preventivo. Nessuna sorpresa.",
+    "q3": "Quanto tempo ci vuole?",
+    "a3": "I tempi sono indicati per ogni pacchetto e partono dalla data di start che blocchi tu. Se sei in ritardo con i materiali, la data slitta con te.",
+    "q4": "Emettete fattura?",
+    "a4": "Sempre. Fattura regolare per ogni progetto e per ogni mese di gestione social.",
+    "q5": "Il mio progetto è più grande. Si può?",
+    "a5": "Certo. Componi più pacchetti insieme, oppure chiedi un preventivo custom: anche quello a prezzo bloccato, deciso prima di iniziare."
+  },
+  "cta": {
+    "title": "Scegli. Paghi. Fatto",
+    "lede": "Raccontaci il progetto in una call di 20 minuti. Esci con un prezzo e una data, non con un “ti facciamo sapere”.",
+    "book": "Prenota una call"
+  },
+  "footer": {
+    "tag": "Design & social a prezzo fisso. Fatto a Padova.",
+    "navAria": "Link footer",
+    "packages": "Pacchetti",
+    "how": "Come funziona",
+    "faq": "FAQ",
+    "legal": "Punto Design · P.IVA IT00000000000"
+  }
+}

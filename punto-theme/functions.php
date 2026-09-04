@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'PUNTO_VERSION' ) ) {
-	define( 'PUNTO_VERSION', '1.0.0' );
+	define( 'PUNTO_VERSION', '1.1.0' );
 }
 
 /**
@@ -45,7 +45,8 @@ add_action( 'after_setup_theme', 'punto_setup' );
  * Enqueue styles, scripts, and fonts.
  *
  * The exact same Google Fonts URL and the site's real stylesheet/script are
- * loaded here so nothing about the design or behavior changes.
+ * loaded here so nothing about the design changes. The i18n script powers the
+ * in-place EN/IT toggle and receives the JSON base path via wp_localize_script.
  */
 function punto_assets() {
 	// Google Fonts — identical to the static site (Bricolage Grotesque, DM Mono, Instrument Sans).
@@ -70,7 +71,27 @@ function punto_assets() {
 		get_template_directory_uri() . '/assets/js/main.js',
 		array(),
 		PUNTO_VERSION,
-		true // In the footer, same as the original placement before </body>.
+		true
+	);
+
+	// Client-side language toggle (in-place text swap, no navigation).
+	wp_enqueue_script(
+		'punto-i18n',
+		get_template_directory_uri() . '/assets/js/i18n.js',
+		array(),
+		PUNTO_VERSION,
+		true
+	);
+
+	// Inject the JSON base path so i18n.js fetches
+	// /wp-content/themes/<theme>/assets/data/{it,en}.json — and the default language.
+	wp_localize_script(
+		'punto-i18n',
+		'PUNTO',
+		array(
+			'dataBase'    => get_template_directory_uri() . '/assets/data/',
+			'defaultLang' => 'it',
+		)
 	);
 }
 add_action( 'wp_enqueue_scripts', 'punto_assets' );
@@ -97,22 +118,6 @@ function punto_resource_hints( $urls, $relation_type ) {
 add_filter( 'wp_resource_hints', 'punto_resource_hints', 10, 2 );
 
 /**
- * Which language is the current view rendering?
- *
- * The English homepage uses the "English Home" page template
- * (template-english.php). Everything else defaults to Italian, exactly like
- * the static site (index.html = IT, en.html = EN).
- *
- * @return string 'en' or 'it'.
- */
-function punto_lang() {
-	if ( is_page_template( 'template-english.php' ) ) {
-		return 'en';
-	}
-	return 'it';
-}
-
-/**
  * Emit the inline SVG favicon used by the static site (cobalt dot on paper).
  * Kept identical so the browser-tab icon does not change.
  */
@@ -124,50 +129,42 @@ add_action( 'wp_head', 'punto_favicon' );
 /**
  * Fallback header navigation.
  *
- * Prints the exact anchor markup from the static site so the header looks
- * identical before any menu is created in Appearance → Menus. Language-aware
- * so the Italian and English homepages read the same as index.html / en.html.
+ * Prints the exact anchor markup from the static site (with data-i18n keys) so
+ * the header looks identical before any menu is created, and stays translatable
+ * by the client-side toggle.
  */
 function punto_primary_menu_fallback() {
-	if ( 'en' === punto_lang() ) {
-		echo '<nav class="nav__links" aria-label="Main navigation">';
-		echo '<a href="#packages">Packages</a>';
-		echo '<a href="#how-it-works">How it works</a>';
-		echo '<a href="#faq">FAQ</a>';
-		echo '</nav>';
-	} else {
-		echo '<nav class="nav__links" aria-label="Navigazione principale">';
-		echo '<a href="#pacchetti">Pacchetti</a>';
-		echo '<a href="#come-funziona">Come funziona</a>';
-		echo '<a href="#faq">FAQ</a>';
-		echo '</nav>';
-	}
+	echo '<nav class="nav__links" aria-label="Navigazione principale" data-i18n-aria-label="nav.navAria">';
+	echo '<a href="#pacchetti" data-i18n="nav.packages">Pacchetti</a>';
+	echo '<a href="#come-funziona" data-i18n="nav.how">Come funziona</a>';
+	echo '<a href="#faq" data-i18n="nav.faq">FAQ</a>';
+	echo '</nav>';
 }
 
 /**
- * Force the <html> lang attribute to match the static site exactly
- * ("it" on the Italian home, "en" on the English page), instead of the
- * site's full locale (e.g. it-IT). language_attributes() still drives it.
+ * The homepage renders Italian by default (matching the static site), so pin the
+ * front page's <html> lang to "it". i18n.js updates it live when toggled. Other
+ * pages keep WordPress's normal locale behavior.
  *
  * @param string $output The already-built language attributes string.
  * @return string
  */
 function punto_language_attributes( $output ) {
-	return 'lang="' . esc_attr( punto_lang() ) . '"';
+	if ( is_front_page() ) {
+		return 'lang="it"';
+	}
+	return $output;
 }
 add_filter( 'language_attributes', 'punto_language_attributes' );
 
 /**
- * Preserve the static site's exact <title> strings on the two homepages.
- * Other pages keep WordPress's normal title behavior.
+ * Preserve the static site's exact Italian <title> on the homepage (the default
+ * language). i18n.js updates document.title when the visitor switches to English.
  *
  * @param array $parts The document title parts.
  * @return array
  */
 function punto_document_title_parts( $parts ) {
-	if ( is_page_template( 'template-english.php' ) ) {
-		return array( 'title' => 'Punto — Design & social at a fixed price' );
-	}
 	if ( is_front_page() ) {
 		return array( 'title' => 'Punto — Design & social a prezzo fisso' );
 	}

@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Punto — Design & social at a fixed price",
+    "description": "Design and social media studio at a fixed price. One package, one number, no surprises on the invoice. Punto."
+  },
+  "nav": {
+    "skip": "Skip to packages",
+    "brandAria": "Punto — back to top",
+    "navAria": "Main navigation",
+    "packages": "Packages",
+    "how": "How it works",
+    "faq": "FAQ",
+    "cta": "Book a call"
+  },
+  "hero": {
+    "eyebrow": "Design & social media studio",
+    "lede": "Design and social at a fixed price. One package, one number, no surprises on the invoice.",
+    "choose": "Choose a package",
+    "how": "How it works",
+    "foot1": "Two revision rounds included",
+    "foot2": "Delivered on time",
+    "foot3": "Always invoiced"
+  },
+  "manifesto": {
+    "title": "No more quotes that keep changing",
+    "item1": "No hourly rates",
+    "item2": "No “it depends”",
+    "item3": "No surprise revisions",
+    "note": "The number next to a package is the number you pay. We put it in writing before we start, and it stays put."
+  },
+  "pkg": {
+    "eyebrow": "The packages",
+    "title": "Choose. You already know the price.",
+    "id": {
+      "name": "Identity",
+      "desc": "Logo, palette, type, and a ready-to-use mini brand kit.",
+      "unit": "/ project",
+      "li1": "Logo in primary + secondary versions",
+      "li2": "Color palette and font pairing",
+      "li3": "File kit for print and web",
+      "li4": "Delivered in 10 days",
+      "cta": "Book Identity"
+    },
+    "social": {
+      "badge": "Most chosen",
+      "name": "Social",
+      "desc": "Ready-to-post content, every month, without chasing ideas.",
+      "unit": "/ month",
+      "li1": "12 posts + 8 stories a month",
+      "li2": "Monthly content plan",
+      "li3": "Graphics matched to your identity",
+      "li4": "No lock-in: cancel anytime",
+      "cta": "Book Social"
+    },
+    "sito": {
+      "name": "Website",
+      "desc": "A one-page showcase site, fast and readable on any screen.",
+      "unit": "/ project",
+      "li1": "One-page responsive, copy included",
+      "li2": "Contact form and map",
+      "li3": "Basic Google optimization",
+      "li4": "Delivered in 15 days",
+      "cta": "Book Website"
+    },
+    "fineprint": "Prices exclude VAT. Need more than one package? They combine. Something bigger? <a href='#prenota'>Custom quote — still locked.</a>"
+  },
+  "steps": {
+    "eyebrow": "How it works",
+    "title": "Four steps, and it’s done.",
+    "s1t": "Choose the package",
+    "s1x": "Price and timeline are already set. No quote to wait for.",
+    "s2t": "Lock the date",
+    "s2x": "A deposit sets the start. The rest on delivery.",
+    "s3t": "Send your materials",
+    "s3x": "A guided brief asks only for what actually matters.",
+    "s4t": "Get the work",
+    "s4x": "On time, with two revision rounds included. Punto."
+  },
+  "faq": {
+    "eyebrow": "Fair questions",
+    "title": "The answers, no detours.",
+    "q1": "Is the price really fixed?",
+    "a1": "Yes. The number next to the package is what you pay. We put it in writing before we start, and it won’t change midway.",
+    "q2": "What if I need more changes?",
+    "a2": "Two revision rounds are included in every package. If you need more, they have a fixed rate per round, written in the quote. No surprises.",
+    "q3": "How long does it take?",
+    "a3": "Timelines are listed per package and start from the date you lock in. If your materials run late, the date moves with you.",
+    "q4": "Do you invoice?",
+    "a4": "Always. A proper invoice for every project and every month of social management.",
+    "q5": "My project is bigger. Can you do it?",
+    "a5": "Of course. Combine several packages, or ask for a custom quote — also at a fixed price, agreed before we start."
+  },
+  "cta": {
+    "title": "Choose. Pay. Done",
+    "lede": "Tell us about the project in a 20-minute call. You leave with a price and a date, not a “we’ll get back to you”.",
+    "book": "Book a call"
+  },
+  "footer": {
+    "tag": "Design & social at a fixed price. Made in Padua.",
+    "navAria": "Footer links",
+    "packages": "Packages",
+    "how": "How it works",
+    "faq": "FAQ",
+    "legal": "Punto Design · VAT IT00000000000"
+  }
+}

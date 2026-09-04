@@ -1,8 +1,9 @@
 # Punto — WordPress Theme (Install & Setup)
 
 A faithful WordPress port of the static Punto site. Same markup, CSS, fonts,
-and interactions — Italian homepage by default, English on a page template,
-WooCommerce-ready but not WooCommerce-dependent.
+and interactions — one bilingual homepage with a **client-side EN/IT toggle**
+(no `/en/` page, no reload), Italian by default, WooCommerce-ready but not
+WooCommerce-dependent.
 
 ---
 
@@ -40,19 +41,24 @@ In WordPress admin:
 
 Visit the site — it should look identical to the Italian static site.
 
-## 4. Create the English page at `/en/`
+## 4. Language toggle — nothing to set up
 
-1. **Pages → Add New**, title it **English** (or anything you like).
-2. In the page settings sidebar, set the **URL slug** to `en` so it lives at
-   `/en/`. (The IT/EN toggle links point at `home_url('/en/')`.)
-3. In the sidebar under **Template**, choose **“English Home”**.
-4. **Publish**. Leave the editor content empty — the template holds the copy.
+The **EN/IT** button in the header is a **client-side toggle**: it swaps the
+on-page text instantly, with no navigation and no `/en/` page. There is nothing
+to configure — it works as soon as the theme is active.
 
-Now the header **EN** button goes to `/en/`, and the **IT** button there goes
-back to the Italian home. Behaviour matches the static `index.html` / `en.html`.
+How it works:
+- Italian is the default and is what the server renders.
+- `assets/js/i18n.js` fetches `assets/data/it.json` / `assets/data/en.json`
+  (base path injected by `functions.php` via `wp_localize_script` as
+  `window.PUNTO.dataBase`, resolving to
+  `/wp-content/themes/punto-theme/assets/data/`).
+- The visitor's choice is remembered in `localStorage` (`punto_lang`).
 
-> If `/en/` shows a 404, go to **Settings → Permalinks** and click **Save**
-> once to flush the rewrite rules.
+To edit copy in either language, edit the matching strings in
+`assets/data/it.json` and `assets/data/en.json` (keys mirror each other).
+
+> Do **not** create an `/en/` page — it isn't used and isn't needed.
 
 ## 5. Header menu (optional)
 
@@ -77,11 +83,15 @@ add WooCommerce and create the products, swap each button’s `href`. Search the
 templates for **`TODO (WooCommerce)`** — there is one comment directly above each
 button:
 
-| Package (IT / EN)      | File                     | Button text            |
-|------------------------|--------------------------|------------------------|
-| Identità / Identity    | `front-page.php`, `template-english.php` | Prenota Identità / Book Identity |
-| Social                 | `front-page.php`, `template-english.php` | Prenota Social / Book Social     |
-| Sito / Website         | `front-page.php`, `template-english.php` | Prenota Sito / Book Website      |
+| Package (IT / EN)      | File             | Button text            |
+|------------------------|------------------|------------------------|
+| Identità / Identity    | `front-page.php` | Prenota Identità / Book Identity |
+| Social                 | `front-page.php` | Prenota Social / Book Social     |
+| Sito / Website         | `front-page.php` | Prenota Sito / Book Website      |
+
+The button label text lives in `assets/data/{it,en}.json` (`pkg.*.cta`); the
+`href` lives in `front-page.php`. Swap the `href` per the TODO; keep the
+`data-i18n` attribute so the label still translates.
 
 Each TODO shows the exact swap, e.g.:
 
@@ -107,30 +117,34 @@ stays the same.
 ```
 punto-theme/
 ├── style.css              WordPress theme header (real CSS is enqueued from assets/)
-├── functions.php          enqueue styles/scripts/fonts, theme setup, menu, WooCommerce support, helpers
-├── header.php             <!DOCTYPE> → opening <main> (language-aware nav)
-├── footer.php             </main> → footer, wp_footer(), closing tags (language-aware)
-├── front-page.php         Italian homepage (from index.html)
-├── template-english.php   "English Home" page template (from en.html)
+├── functions.php          enqueue styles/scripts/fonts, theme setup, menu, WooCommerce support, i18n localize
+├── header.php             <!DOCTYPE> → opening <main> (nav + EN/IT toggle button)
+├── footer.php             </main> → footer, wp_footer(), closing tags
+├── front-page.php         the single bilingual homepage (Italian default, data-i18n hooks)
 ├── index.php              generic fallback template
 ├── page.php               standard interior pages
 ├── screenshot.png         theme thumbnail
 ├── INSTALL.md             this file
 └── assets/
-    ├── css/style.css      the site's real stylesheet (verbatim)
-    ├── js/main.js         the site's real script (footer year + FAQ accordion)
+    ├── css/style.css      the site's real stylesheet (verbatim, + button reset for .nav__lang)
+    ├── js/main.js         footer year + single-open FAQ accordion
+    ├── js/i18n.js         client-side EN/IT toggle (fetches data/*.json, localStorage)
+    ├── data/it.json       Italian strings
+    ├── data/en.json       English strings
     ├── fonts/             (empty — fonts load from Google Fonts, as on the static site)
     └── img/               (empty — the static site uses no image files)
 ```
 
-## Notes / what could not be “ported” as-is
+## Notes
 
-- **Fonts stay on Google Fonts.** The static site loads Bricolage Grotesque,
-  DM Mono, and Instrument Sans from `fonts.googleapis.com`; the theme enqueues
-  the exact same URL. `assets/fonts/` is left empty on purpose. If you ever need
-  fully self-hosted fonts (GDPR), download the WOFF2 files into `assets/fonts/`
-  and add `@font-face` rules — this changes hosting only, not the design.
-- **No images to port.** The static site has no image assets; the favicon is an
-  inline SVG data-URI, reproduced via `wp_head` so the tab icon is unchanged.
-- **Language switching is the simple two-page setup** requested — no Polylang or
-  WPML. Add one later if you want proper hreflang and per-string translation.
+- **One bilingual page, client-side toggle.** Both languages live on the same
+  homepage; `i18n.js` swaps `data-i18n` nodes in place from `data/{it,en}.json`.
+  No `/en/` page, no Polylang/WPML. Add one later if you want per-URL pages with
+  hreflang.
+- **Fonts stay on Google Fonts.** The theme enqueues the exact same URL the
+  static site used. `assets/fonts/` is empty on purpose. To self-host (GDPR),
+  drop WOFF2 files there and add `@font-face` rules — hosting only, not design.
+- **No images to port.** The favicon is an inline SVG data-URI, reproduced via
+  `wp_head` so the tab icon is unchanged.
+- **Contact email** is `r.sahraei88@gmail.com` (CTA buttons + footer, both
+  languages). Domain references use `punto.center` / WordPress URL functions.

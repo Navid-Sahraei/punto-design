@@ -169,6 +169,13 @@ h1, h2, h3 {
 .nav__links a { text-decoration: none; color: var(--muted); transition: color 0.15s ease; }
 .nav__links a:hover { color: var(--ink); }
 .nav__lang {
+  /* Rendered as a <button> for the client-side toggle; reset native button
+     styling so it looks identical to the old anchor. */
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1.2;
   font-family: var(--mono);
   font-size: 0.85rem;
   letter-spacing: 0.08em;

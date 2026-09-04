@@ -2,9 +2,8 @@
 /**
  * Template for standard interior pages.
  *
- * The homepage uses front-page.php and the English home uses
- * template-english.php; this handles ordinary pages (About, Privacy, etc.)
- * inside the Punto shell.
+ * The homepage uses front-page.php; this handles ordinary pages (About,
+ * Privacy, etc.) inside the Punto shell.
  *
  * @package punto
  */
