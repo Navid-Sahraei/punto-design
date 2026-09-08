@@ -20,7 +20,7 @@
 		<a href="#faq" data-i18n="footer.faq">FAQ</a>
 		<a href="mailto:r.sahraei88@gmail.com">Email</a>
 	</nav>
-	<p class="footer__legal">&copy; <span id="year">2026</span> <span data-i18n="footer.legal">Punto Design &middot; P.IVA IT00000000000</span></p>
+	<p class="footer__legal">&copy; <span id="year">2026</span> <span data-i18n="footer.legal">Punto Design &middot; P.IVA IT05805530283</span></p>
 </footer>
 
 <?php wp_footer(); ?>
