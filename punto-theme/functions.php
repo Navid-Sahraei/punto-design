@@ -171,3 +171,70 @@ function punto_document_title_parts( $parts ) {
 	return $parts;
 }
 add_filter( 'document_title_parts', 'punto_document_title_parts' );
+
+/* =========================================================
+   WooCommerce — package buttons: add to cart, straight to checkout
+   ========================================================= */
+
+/**
+ * Resolve a WooCommerce product ID from its slug (post_name).
+ *
+ * @param string $slug Product slug, e.g. "identita", "social", "sito".
+ * @return int Product ID, or 0 if not found / WooCommerce inactive.
+ */
+function punto_product_id_by_slug( $slug ) {
+	if ( ! function_exists( 'WC' ) ) {
+		return 0;
+	}
+	$product_post = get_page_by_path( sanitize_title( $slug ), OBJECT, 'product' );
+	return $product_post ? (int) $product_post->ID : 0;
+}
+
+/**
+ * Build the add-to-cart URL for a package, resolved dynamically from its slug so
+ * it keeps working even if product IDs change. When WooCommerce is inactive or
+ * the product is missing, return the original in-page anchor so the button still
+ * looks and behaves exactly as before (no fatals, no design change).
+ *
+ * Combined with the woocommerce_add_to_cart_redirect filter below, clicking the
+ * button adds THAT product and lands the visitor straight on checkout.
+ *
+ * @param string $slug     Product slug: identita | social | sito.
+ * @param string $fallback Href to use when Woo/product is unavailable.
+ * @return string URL (add-to-cart) or the fallback anchor.
+ */
+function punto_add_to_cart_url( $slug, $fallback = '#prenota' ) {
+	$product_id = punto_product_id_by_slug( $slug );
+	if ( ! $product_id ) {
+		return $fallback;
+	}
+
+	// Prefer WooCommerce's own builder (handles simple/variable products).
+	if ( function_exists( 'wc_get_product' ) ) {
+		$product = wc_get_product( $product_id );
+		if ( $product && is_callable( array( $product, 'add_to_cart_url' ) ) ) {
+			$url = $product->add_to_cart_url();
+			if ( $url ) {
+				return $url;
+			}
+		}
+	}
+
+	// Fallback: plain add-to-cart query on the site URL (punto.center).
+	return add_query_arg( 'add-to-cart', $product_id, home_url( '/' ) );
+}
+
+/**
+ * After a successful add-to-cart, send the visitor straight to checkout
+ * ("Option B") instead of the cart page or the referring page.
+ *
+ * @param string $url Default redirect URL from WooCommerce.
+ * @return string
+ */
+function punto_add_to_cart_redirect( $url ) {
+	if ( function_exists( 'wc_get_checkout_url' ) ) {
+		return wc_get_checkout_url();
+	}
+	return $url;
+}
+add_filter( 'woocommerce_add_to_cart_redirect', 'punto_add_to_cart_redirect' );

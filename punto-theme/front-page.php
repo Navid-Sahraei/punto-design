@@ -73,16 +73,8 @@ get_header();
 					<li data-i18n="pkg.id.li3">Kit file per stampa e web</li>
 					<li data-i18n="pkg.id.li4">Consegna in 10 giorni</li>
 				</ul>
-				<?php
-				/**
-				 * TODO (WooCommerce): point this button at the "Identità" product.
-				 * Once WooCommerce is installed and the product created, replace the
-				 * href="#prenota" below with the add-to-cart or product URL, e.g.:
-				 *   href="<?php echo esc_url( home_url( '/?add-to-cart=IDENTITA_PRODUCT_ID' ) ); ?>"
-				 * Keep the class="btn btn--ink pkg__cta", the data-i18n key, and the text.
-				 */
-				?>
-				<a class="btn btn--ink pkg__cta" href="#prenota" data-i18n="pkg.id.cta">Prenota Identità</a>
+				<?php // Add-to-cart URL built from the "identita" product slug (see functions.php). Straight to checkout via woocommerce_add_to_cart_redirect. ?>
+				<a class="btn btn--ink pkg__cta" href="<?php echo esc_url( punto_add_to_cart_url( 'identita' ) ); ?>" data-i18n="pkg.id.cta">Prenota Identità</a>
 			</article>
 
 			<!-- Social - featured -->
@@ -99,15 +91,8 @@ get_header();
 					<li data-i18n="pkg.social.li3">Grafiche coordinate con la tua identità</li>
 					<li data-i18n="pkg.social.li4">Nessun vincolo: disdici quando vuoi</li>
 				</ul>
-				<?php
-				/**
-				 * TODO (WooCommerce): point this button at the "Social" product
-				 * (a subscription/monthly product). Replace href="#prenota" below, e.g.:
-				 *   href="<?php echo esc_url( home_url( '/?add-to-cart=SOCIAL_PRODUCT_ID' ) ); ?>"
-				 * Keep the class="btn btn--paper pkg__cta", the data-i18n key, and the text.
-				 */
-				?>
-				<a class="btn btn--paper pkg__cta" href="#prenota" data-i18n="pkg.social.cta">Prenota Social</a>
+				<?php // Add-to-cart URL built from the "social" product slug (see functions.php). Straight to checkout via woocommerce_add_to_cart_redirect. ?>
+				<a class="btn btn--paper pkg__cta" href="<?php echo esc_url( punto_add_to_cart_url( 'social' ) ); ?>" data-i18n="pkg.social.cta">Prenota Social</a>
 			</article>
 
 			<!-- Sito -->
@@ -123,15 +108,8 @@ get_header();
 					<li data-i18n="pkg.sito.li3">Ottimizzazione base per Google</li>
 					<li data-i18n="pkg.sito.li4">Consegna in 15 giorni</li>
 				</ul>
-				<?php
-				/**
-				 * TODO (WooCommerce): point this button at the "Sito" product.
-				 * Replace href="#prenota" below, e.g.:
-				 *   href="<?php echo esc_url( home_url( '/?add-to-cart=SITO_PRODUCT_ID' ) ); ?>"
-				 * Keep the class="btn btn--ink pkg__cta", the data-i18n key, and the text.
-				 */
-				?>
-				<a class="btn btn--ink pkg__cta" href="#prenota" data-i18n="pkg.sito.cta">Prenota Sito</a>
+				<?php // Add-to-cart URL built from the "sito" product slug (see functions.php). Straight to checkout via woocommerce_add_to_cart_redirect. ?>
+				<a class="btn btn--ink pkg__cta" href="<?php echo esc_url( punto_add_to_cart_url( 'sito' ) ); ?>" data-i18n="pkg.sito.cta">Prenota Sito</a>
 			</article>
 		</div>
 
